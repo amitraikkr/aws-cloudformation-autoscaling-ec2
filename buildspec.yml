@@ -1,0 +1,7 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Deploying CloudFormation template"
+      - aws cloudformation deploy --template-file aws-cfn-asg-ec2.yaml --stack-name MyAutoScalingStack --capabilities CAPABILITY_IAM
